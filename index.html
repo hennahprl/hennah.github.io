@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llamas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <h1>About Me</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="portfolio.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/me.png" class="hennah">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/name.png">
+                    <div>
+                        <h1>Description</h1>
+                        <ul>
+                            <li>I am Hennah Pearl M. Llamas</li>
+                            <li>20 years old</li>
+                            <li>2nd Year - BSIT student</li>
+                            <li>Studying at USTP</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/hobby.png">
+                    <div>
+                        <h1>Hobbies</h1>
+                        <ul>
+                            <li>Listening to Music</li>
+                            <li>Watching old Movies/Series</li>
+                            <li>Sleeping all day</li>
+                            <li>Hanging out with Friends</li>
+                            <li>Playing with my Cat</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/personality.png">
+                    <div>
+                        <h1>Personality Trait</h1>
+                        <ul>
+                            <li>Loyal</li>
+                            <li>Witty</li>
+                            <li>Nemophilist</li>
+                            <li>Ambivert</li>
+                            <li>Thoughtful</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/goal.png">
+                    <div>
+                        <h1>Goals</h1>
+                        <ul>
+                            <li>Achieve Good Grades</li>
+                            <li>Apply what will be Discussed.</li>
+                            <li>Maintain Good Relationships</li>
+                            <li>Pass all the Subjects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="images/up.png" id="up">
+            <h3>Click for More</h3>
+            <img src="images/down.png" id="down">
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var up = document.getElementById("up");
+        var down = document.getElementById("down");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        up.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)"
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        down.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)"
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+
+</body>
+</html>
